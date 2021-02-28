@@ -44,7 +44,7 @@
 	    $response_data=array();
 	    $obj=new searching($input,$connection_mock_chat);
 	    $keys=array('type','table_name','search_col_name','get_colms','get_id');
-	    $value=array(array('string','login_db.mock_test_tbl','name','null as name,id,null as email,null as phone,null as gender','id'));
+	    $value=array(array('string','mock_test_db.mock_test_tbl','name','null as name,id,null as email,null as phone,null as gender','id'));
 	    $query_data=array();
 
 	    foreach ($value as $key => $value1) 
@@ -66,7 +66,7 @@
 	    $where_data=$obj->searching_data($get_ids);
 
 	    $table_from=array("table_name_id","table_name_email");
-	    $table1_to=array("login_db.mock_test_tbl","login_db.mock_test_tbl");
+	    $table1_to=array("mock_test_db.mock_test_tbl","mock_test_db.mock_test_tbl");
 	    $tble1=str_replace($table_from, $table1_to, $where_data);
 
 	    if($tble1=='')
@@ -97,7 +97,7 @@
 
 	        $user='root';
 
-			$connection= mysqli_connect ($host, $user, "root" , $db); 
+			$connection= mysqli_connect ($host, $user, "" , $db); 
 			if (!$connection) 
 			{
 				die ( "no connection found" . mysqli_error($connection));
