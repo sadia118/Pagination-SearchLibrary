@@ -1,8 +1,8 @@
 <?php
 
-	require_once('/Applications/MAMP/htdocs/Mock_test_1/search_library/search.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/Pagination-SearchLibrary/search_library/search.php');
 
-	require_once('/Applications/MAMP/htdocs/Mock_test_1/pagination1.0/prepared_query.php');
+	require_once($_SERVER["DOCUMENT_ROOT"].'/Pagination-SearchLibrary/pagination1.0/prepared_query.php');
 
 
 	$application_obj = new ManageApp();
